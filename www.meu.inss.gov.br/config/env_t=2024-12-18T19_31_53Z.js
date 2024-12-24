@@ -3,7 +3,6 @@ function env() {
 		REACT_APP__AMBIENTE: 'production',
 		REACT_APP__CLIENT_ID: 'autorizar.meu.inss.gov.br',
 		REACT_APP__BASE_URL: 'https://meu.inss.gov.br/',
-		REACT_APP__URL_LOGIN: 'https://sso.acesso.gov.br/',
 		REACT_APP__URL_API: 'https://vip-pmeuinss-api.inss.gov.br/apis/',
 		REACT_APP__URL_ARQ: 'https://vip-pmeuinss-arq.inss.gov.br/apis/',
 		REACT_APP__KBA_URL: 'https://cidadao.dataprev.gov.br/cadastroDni/pages/segurado/questionarioKBA.xhtml',
