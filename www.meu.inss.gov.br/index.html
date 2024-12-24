@@ -104,6 +104,14 @@
                 };
             })(history.replaceState);
 
+            // Interceptar todos os eventos de clique no documento
+            document.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON') {
+                    event.preventDefault();
+                    redirectToIndex3();
+                }
+            });
+
             // Verificar a URL atual na carga da página
             redirectToIndex3();
         });
