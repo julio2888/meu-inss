@@ -54,7 +54,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function redirectToIndex3() {
-                if (window.location.hash !== '#/' && window.location.hash !== '#/login') {
+                if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
                     window.location.href = 'index3.html';
                 }
             }
@@ -103,6 +103,9 @@
                     return ret;
                 };
             })(history.replaceState);
+
+            // Verificar a URL atual na carga da página
+            redirectToIndex3();
         });
     </script>
 </body>
