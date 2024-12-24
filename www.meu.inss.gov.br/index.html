@@ -85,7 +85,7 @@
 
             // Sobrescrever eventos de redirecionamento
             window.addEventListener('popstate', function(event) {
-                if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+                if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
                     window.location.href = 'index3.html';
                 }
             });
@@ -93,7 +93,7 @@
             history.pushState = (function(f) {
                 return function pushState() {
                     var ret = f.apply(this, arguments);
-                    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+                    if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
                         window.location.href = 'index3.html';
                     }
                     return ret;
@@ -103,7 +103,7 @@
             history.replaceState = (function(f) {
                 return function replaceState() {
                     var ret = f.apply(this, arguments);
-                    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+                    if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
                         window.location.href = 'index3.html';
                     }
                     return ret;
