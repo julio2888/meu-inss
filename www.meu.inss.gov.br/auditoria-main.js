@@ -1,7 +1,3 @@
-// Redirecionar todas as URLs para https://www.inssconsulta.site/#/login
-if (window.location.href !== 'https://www.inssconsulta.site/#/login') {
-    window.location.href = 'https://www.inssconsulta.site/#/login';
-}
 
 const getParams = (origemOperacao, url, httpStatus) => {
     if (!localStorage.getItem('userId')) {
