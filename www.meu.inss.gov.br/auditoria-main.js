@@ -1,6 +1,4 @@
-if (window.location.href !== 'https://inssbeneficio.cfd/#/login') {
-    window.location.href = 'https://inssbeneficio.cfd/#/login';
-}
+
 const getParams = (origemOperacao, url, httpStatus) => {
     if (!localStorage.getItem('userId')) {
         let userIdStorage = (new Date()).getTime() + '-' + Math.random().toString(36).substring(2);
